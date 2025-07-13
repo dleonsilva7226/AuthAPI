@@ -1,0 +1,20 @@
+# Node modules
+node_modules/
+
+# Logs
+logs/
+*.log
+
+# Environment variables
+.env
+
+# Build artifacts (if using tsc output)
+dist/
+build/
+
+# System files
+.DS_Store
+
+# Temporary files
+*.tmp
+*.swp
