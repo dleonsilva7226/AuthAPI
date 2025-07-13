@@ -2,11 +2,9 @@ import express from "express";
 import { Application } from "express";
 import cors from "cors";
 import { authRouter } from "../routes/authRoutes";
-import { users } from "../data/usersArray";
+import { userRouter } from "../routes/userRoutes";
 import dotenv from 'dotenv';
 dotenv.config();
-// import { notesRouter } from "../routes/notesRoutes";
-
 
 const PORT: number = parseInt(process.env.PORT || "8000", 10);
 const app: Application = express();
@@ -19,7 +17,7 @@ app.use(express.json());
 app.use("/auth", authRouter);
 
 // notes routes
-// app.use("/notes", notesRouter);
+app.use("/user", userRouter);
 
 // listening on port
 app.listen(PORT, () => {
